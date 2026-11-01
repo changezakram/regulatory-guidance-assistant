@@ -1,0 +1,124 @@
+question,answerable,refused,retrieval_hit,grounded,unsupported_claims,answer,sources
+What does SR 26-2 say about effective challenge?,True,False,True,yes,none,"According to SR 26-2, effective challenge refers to the critical analysis conducted by objective experts who evaluate model risk and effect appropriate changes throughout the model lifecycle, from model development to ongoing monitoring [2]. These experts should have the appropriate expertise, sufficient independence to maintain objectivity, as well as the organizational standing and influence to effect any change [2].",SR 26-2 Model Risk Management p.6; SR 26-2 Model Risk Management p.5; SR 26-2 Model Risk Management p.5; SR 26-2 Model Risk Management p.9; SR 26-2 Model Risk Management p.2
+How does SR 26-2 address tailoring model risk management to a bank's size and complexity?,True,False,True,yes,none,"According to [1] and [5], SR 26-2 addresses tailoring model risk management to a bank's size and complexity by stating that the guidance is expected to be most relevant to banking organizations with over $30 billion in total assets, but may also be relevant to smaller banks with significant exposure to model risk due to the prevalence and complexity of their models or activities outside traditional community banking. Additionally, [4] notes that the size and complexity of the banking organization's operations may influence the range of model risk management, with simpler operations requiring less rigorous model risk management practices.",SR 26-2 Model Risk Management p.2; SR 26-2 Model Risk Management p.1; SR 26-2 Model Risk Management p.2; SR 26-2 Model Risk Management p.5; SR 26-2 Model Risk Management p.3
+Which agencies issued SR 26-2?,True,False,True,yes,none,"The agencies that issued SR 26-2 Model Risk Management are:
+
+* Office of the Comptroller of the Currency
+* Board of Governors of the Federal Reserve System
+* Federal Deposit Insurance Corporation",SR 26-2 Model Risk Management p.2; SR 26-2 Model Risk Management p.8; SR 26-2 Model Risk Management p.1; SR 26-2 Model Risk Management p.11; SR 26-2 Model Risk Management p.9
+How does SR 11-7 define a model?,True,False,True,no,"The answer claims that a definition of a model is not found in the provided sources, but this is actually supported by the sources, as the term 'model' is used throughout the documents without being explicitly defined.",I couldn't find a definition of a model in the provided sources.,SR 11-7 Model Risk Management (superseded) p.2; SR 11-7 Model Risk Management (superseded) p.21; SR 11-7 Model Risk Management (superseded) p.20; SR 11-7 Model Risk Management (superseded) p.18; SR 11-7 Model Risk Management (superseded) p.5
+What are the core elements of model validation in SR 11-7?,True,False,True,yes,none,"According to SR 11-7, the core elements of model validation are:
+
+* Evaluation of conceptual soundness, including developmental evidence
+* Ongoing monitoring, including process verification and benchmarking
+* Outcomes analysis, including back-testing [1]
+
+These elements are essential for ensuring that models are accurate, reliable, and effective in managing risk.",SR 11-7 Model Risk Management (superseded) p.11; SR 11-7 Model Risk Management (superseded) p.15; SR 11-7 Model Risk Management (superseded) p.2; SR 11-7 Model Risk Management (superseded) p.9; SR 11-7 Model Risk Management (superseded) p.10
+What is outcomes analysis in model validation?,True,False,True,yes,none,"Outcomes analysis is a comparison of model outputs to corresponding actual outcomes to assess model performance relative to model objectives and business use [1]. It involves evaluating the reasonableness and appropriateness of the results, with additional analysis and testing if warranted [1]. Outcomes analysis can take many forms, including testing conducted during model development, reports or analysis performed as part of ongoing monitoring, or standalone activities such as back-testing or outlier analysis [1]. It can also involve the use of statistical tests or other quantitative measures to evaluate model performance [2]. The purpose of outcomes analysis is to test the model, not individual forecast values, and to determine whether differences between actual outcomes and model forecasts are due to material factors, errors in model specification, or random variation [4].",SR 26-2 Model Risk Management p.9; SR 11-7 Model Risk Management (superseded) p.13; SR 11-7 Model Risk Management (superseded) p.15; SR 11-7 Model Risk Management (superseded) p.14; SR 11-7 Model Risk Management (superseded) p.14
+What role does the board of directors play in model risk management under SR 11-7?,True,False,True,yes,none,"According to [1] and [2], the board of directors plays a crucial role in model risk management under SR 11-7. They are responsible for establishing a bank-wide approach to model risk management and setting the tone for the organization about the importance of model risk and the need for active model risk management. They should ensure that the level of model risk is within their tolerance and direct changes where necessary. The board or its delegates should also approve model risk management policies and review them annually to ensure consistent and rigorous practices across the organization.
+
+Specifically, the board's duties include:
+
+* Establishing a strong model risk management framework that fits into the broader risk management of the organization
+* Ensuring that model risk management practices remain appropriate and keep current with changes in market conditions, bank products and strategies, bank exposures and activities, and practices in the industry
+* Reviewing and approving model risk management policies and procedures
+* Ensuring that the level of model risk is within their tolerance and directing changes where necessary
+
+Overall, the board of directors is ultimately responsible for model risk management, and they should ensure that the bank has a robust model risk management framework in place to mitigate potential risks.",SR 11-7 Model Risk Management (superseded) p.17; SR 11-7 Model Risk Management (superseded) p.17; SR 11-7 Model Risk Management (superseded) p.2; SR 11-7 Model Risk Management (superseded) p.1; SR 11-7 Model Risk Management (superseded) p.21
+What are the four core functions of the NIST AI Risk Management Framework?,True,False,True,yes,none,"The four core functions of the NIST AI Risk Management Framework are:
+
+1. GOVERN
+2. MAP
+3. MEASURE
+4. MANAGE
+
+These functions are described in the NIST AI RMF document [1] and [2].",NIST AI RMF p.25; NIST AI RMF p.8; NIST AI RMF p.44; NIST AI RMF p.26; NIST AI RMF p.15
+What characteristics of trustworthy AI does the NIST AI RMF describe?,True,False,True,yes,none,"The NIST AI RMF describes the following characteristics of trustworthy AI:
+
+* Valid and Reliable [1]
+* Safe [1]
+* Secure and Resilient [1]
+* Accountable and Transparent [1, 2]
+* Explainable and Interpretable [1, 4]
+* Privacy-Enhanced [4]
+* Fair with Harmful Bias Managed [1]
+
+These characteristics are shown in Figure 4 of the NIST AI RMF [2, 3].",NIST AI RMF p.17; NIST AI RMF p.5; NIST AI RMF p.5; NIST AI RMF p.22; NIST AI RMF p.34
+What does the GOVERN function cover in the NIST AI RMF?,True,False,True,yes,none,"The GOVERN function in the NIST AI RMF covers several key areas, including:
+
+* Governance and risk management policies, processes, and procedures (GOVERN 1)
+* Legal and regulatory requirements involving AI (GOVERN 1.1)
+* Integration of trustworthy AI characteristics into organizational policies and practices (GOVERN 1.2)
+* Determining the needed level of risk management activities based on the organization's risk tolerance (GOVERN 1.3)
+* Establishing a transparent risk management process and its outcomes (GOVERN 1.4)
+* Ongoing monitoring and periodic review of the risk management process (GOVERN 1.5)
+* Inventorying AI systems and resourcing them according to organizational risk priorities (GOVERN 1.6)
+* Decommissioning and phasing out AI systems safely (GOVERN 1.7)
+* Accountability structures, including roles and responsibilities, lines of communication, and training (GOVERN 2)
+* Workforce diversity, equity, inclusion, and accessibility processes (GOVERN 3)
+
+These areas are outlined in Table 1 of the NIST AI RMF, which lists the categories and subcategories for the GOVERN function [4][5].",NIST AI RMF p.27; NIST AI RMF p.46; NIST AI RMF p.30; NIST AI RMF p.27; NIST AI RMF p.28
+What does NIST mean by confabulation in generative AI?,True,False,True,yes,none,"According to the NIST GenAI Profile [1], confabulation refers to a phenomenon in which generative AI systems generate and confidently present erroneous or false content in response to prompts. This can include generated outputs that diverge from the prompts or other input, or that contradict previously generated statements in the same context. Confabulations can occur across GAI outputs and contexts, and are a natural result of the way generative models are designed to approximate the statistical distribution of their training data.",NIST GenAI Profile p.10; NIST GenAI Profile p.58; NIST GenAI Profile p.59; NIST GenAI Profile p.48; NIST GenAI Profile p.35
+What risks unique to or worsened by generative AI does the NIST Generative AI Profile identify?,True,False,True,yes,none,"The NIST Generative AI Profile identifies several risks unique to or worsened by generative AI, including:
+
+* Data poisoning: The NIST Generative AI Profile mentions data poisoning as a risk associated with generative AI, citing a Crowdstrike report [5] (Lenaerts-Bergmans, 2024).
+* Bias and discriminatory outcomes: The profile notes that generative AI can perpetuate and amplify existing biases, leading to discriminatory outcomes [3] (p. 5).
+* Adversarial attacks: The NIST Generative AI Profile highlights the risk of adversarial attacks on generative AI models, which can be used to manipulate or deceive users [3] (p. 5).
+* Misinformation and disinformation: Generative AI can be used to create and spread false or misleading information, which can have serious consequences [3] (p. 5).
+* Mental health risks: The profile mentions the potential for generative AI to have negative impacts on mental health, such as the spread of misinformation or the creation of deepfakes [3] (p. 5).
+* Algorithmic monoculture: The NIST Generative AI Profile notes that the increasing reliance on generative AI can lead to algorithmic monoculture, which can have negative consequences for social welfare [2] (Kleinberg, 2021).
+* Representational harms: The profile highlights the risk of representational harms, such as the perpetuation of stereotypes or the creation of biased images [2] (Katzman, 2023).
+* Power and energy consumption: The NIST Generative AI Profile notes that the increasing use of generative AI can lead to significant power and energy consumption, which can have environmental and economic consequences [2] (Luccioni, 2023).
+
+These risks are identified as unique to or worsened by generative AI, and the NIST Generative AI Profile provides guidance on how to manage and mitigate these risks.",NIST GenAI Profile p.59; NIST GenAI Profile p.60; NIST GenAI Profile p.5; NIST GenAI Profile p.1; NIST GenAI Profile p.2
+What are the stages of the third-party relationship life cycle?,True,False,True,yes,none,"The stages of the third-party relationship life cycle are:
+
+1. Planning
+2. Due Diligence and Collaborative Arrangements
+3. Onboarding and Contracting
+4. Ongoing Monitoring and Review
+5. Offboarding
+
+These stages are shown in Figure 1 and detailed in the Third-Party Risk Guidance [1].",Third-Party Risk Guidance p.28; Third-Party Risk Guidance p.14; Third-Party Risk Guidance p.14; Third-Party Risk Guidance p.15; Third-Party Risk Guidance p.29
+What should due diligence on a third party include?,True,False,True,yes,none,"According to the Third-Party Risk Guidance, due diligence on a third party should include assessing the third party's ability to:
+
+* perform the activity as expected [1]
+* adhere to a banking organization's policies related to the activity [1]
+* comply with all applicable laws and regulations [1]
+* conduct the activity in a safe and sound manner [1]
+
+Additionally, due diligence should be tailored to the specific activity to be performed by the third party, and the scope and degree of due diligence should be commensurate with the level of risk and complexity of the third-party relationship [1].",Third-Party Risk Guidance p.32; Third-Party Risk Guidance p.32; Third-Party Risk Guidance p.16; Third-Party Risk Guidance p.15; Third-Party Risk Guidance p.16
+What should a bank consider when terminating a third-party relationship?,True,False,True,yes,none,"When terminating a third-party relationship, a bank should consider the following factors:
+
+* The contractual provisions, including termination and notification requirements, and the circumstances and responsibilities for termination [3]
+* The potential impact on the bank's employees, including dual employees, and the need for transition steps [2]
+* The need to provide reasonable notice and without penalty, if formally directed by the bank's primary federal banking regulator [4]
+* The potential for disputes and the need for choice-of-law and jurisdictional provisions that provide dispute adjudication under the laws of a single jurisdiction [3]",Third-Party Risk Guidance p.57; Third-Party Risk Guidance p.30; Third-Party Risk Guidance p.50; Third-Party Risk Guidance p.51; Third-Party Risk Guidance p.17
+What changed between SR 11-7 and SR 26-2 on effective challenge?,True,False,True,yes,none,"According to the sources, the following changes can be identified:
+
+* In SR 11-7, effective challenge is described as ""critical analysis by objective, informed parties who can identify model limitations and assumptions and produce appropriate changes"" [1][2].
+* In SR 26-2, effective challenge is described as ""critical analysis conducted by objective experts who evaluate model risk and effect appropriate changes throughout the model lifecycle"" [4].
+* The key differences between the two are:
+	+ SR 26-2 emphasizes the importance of objectivity and independence in conducting effective challenge, stating that individuals with ""sufficient independence to maintain objectivity"" should perform effective challenge [4].
+	+ SR 26-2 also emphasizes the importance of organizational standing and influence in conducting effective challenge, stating that individuals with ""organizational standing and influence to effect any change"" should perform effective challenge [4].
+	+ SR 26-2 does not mention the importance of incentives, competence, and influence in conducting effective challenge, which were emphasized in SR 11-7 [1][2].
+
+Overall, SR 26-2 provides a more detailed and nuanced description of effective challenge, emphasizing the importance of objectivity, independence, and organizational standing and influence.",SR 11-7 Model Risk Management (superseded) p.4; SR 11-7 Model Risk Management (superseded) p.4; SR 11-7 Model Risk Management (superseded) p.7; SR 26-2 Model Risk Management p.5; SR 26-2 Model Risk Management p.9; SR 26-2 Model Risk Management p.6
+How does the NIST AI RMF approach to governance compare with SR 11-7's governance expectations?,True,False,True,yes,none,"The NIST AI RMF and SR 11-7 Model Risk Management guidance share similarities in their approach to governance. Both emphasize the importance of a strong governance framework in effective risk management. According to SR 11-7, a weak governance function will reduce the effectiveness of overall model risk management [4]. Similarly, the NIST AI RMF states that strong governance can drive and enhance internal practices and norms to facilitate organizational risk culture [1]. Both documents also highlight the need for ongoing monitoring and periodic review of the risk management process and its outcomes [1][3].
+
+However, the NIST AI RMF provides more detailed guidance on governance, including categories and subcategories for the GOVERN function, such as ongoing monitoring and periodic review, inventorying AI systems, and accountability structures [3]. In contrast, SR 11-7 Model Risk Management focuses on the importance of governance in model risk management, but does not provide a detailed framework for governance [4][5].
+
+Overall, while both documents emphasize the importance of governance in risk management, the NIST AI RMF provides more comprehensive guidance on governance, including specific categories and subcategories.",NIST AI RMF p.27; NIST AI RMF p.26; NIST AI RMF p.28; SR 11-7 Model Risk Management (superseded) p.16; SR 11-7 Model Risk Management (superseded) p.21; SR 11-7 Model Risk Management (superseded) p.16
+What is Beacon Bank's overdraft fee?,False,True,,,,I couldn't find this in the documents.,Third-Party Risk Guidance p.23; SR 26-2 Model Risk Management p.2; NIST GenAI Profile p.8; Third-Party Risk Guidance p.61; Third-Party Risk Guidance p.23
+What are the capital requirements under Basel III?,False,True,,,,I couldn't find this in the documents.,SR 11-7 Model Risk Management (superseded) p.1; SR 11-7 Model Risk Management (superseded) p.2; Third-Party Risk Guidance p.22; Third-Party Risk Guidance p.5; SR 11-7 Model Risk Management (superseded) p.3
+What does the EU AI Act require for high-risk AI systems?,False,True,,,,I couldn't find this in the documents.,NIST AI RMF p.19; NIST AI RMF p.14; NIST AI RMF p.15; NIST AI RMF p.45; NIST AI RMF p.13
+How should a bank validate a credit scoring model under the Equal Credit Opportunity Act?,False,True,,,,I couldn't find this in the documents.,SR 11-7 Model Risk Management (superseded) p.16; SR 11-7 Model Risk Management (superseded) p.10; SR 11-7 Model Risk Management (superseded) p.20; SR 11-7 Model Risk Management (superseded) p.21; SR 11-7 Model Risk Management (superseded) p.16
+Does SR 26-2 apply to generative AI and agentic AI?,True,False,True,yes,none,"According to [1], generative AI and agentic AI models are novel and rapidly evolving, and are not within the scope of this guidance. However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models.",SR 26-2 Model Risk Management p.3; SR 26-2 Model Risk Management p.8; SR 26-2 Model Risk Management p.12; SR 26-2 Model Risk Management p.1; SR 26-2 Model Risk Management p.9
+Which banking organizations is SR 26-2 primarily aimed at?,True,False,True,yes,none,"According to [2], this guidance is expected to be most useful for models supporting a banking organization's significant business lines, operations, services, and functions. Additionally, [5] states that this guidance is expected to be most relevant to banking organizations with over $30 billion in assets.",SR 26-2 Model Risk Management p.1; SR 26-2 Model Risk Management p.2; SR 26-2 Model Risk Management p.9; SR 26-2 Model Risk Management p.11; SR 26-2 Model Risk Management p.2
+How does SR 26-2 determine whether a model is material?,True,False,True,yes,none,"According to [1], SR 26-2 determines the materiality of a model based on its inherent risk in the context of model materiality, which is defined as the combination of model exposure and purpose. In other words, the magnitude of model risk reflects a model's inherent risk in relation to its potential impact on the banking organization.
+
+Additionally, [2] states that the rigor of effective testing is commensurate with model complexity and materiality, suggesting that models with higher materiality require more comprehensive and rigorous oversight.
+
+It's worth noting that SR 26-2 does not provide a specific threshold or criteria for determining materiality, but rather emphasizes the importance of considering both model exposure and purpose in assessing the overall materiality of a model.",SR 26-2 Model Risk Management p.4; SR 26-2 Model Risk Management p.6; SR 26-2 Model Risk Management p.9; SR 26-2 Model Risk Management p.12; SR 26-2 Model Risk Management p.8
+Can a model be used before it is validated under SR 26-2?,True,False,True,yes,none,"Yes, a model can be used before it is validated under SR 26-2, but with certain conditions. According to [2], ""certain circumstances (e.g., an urgent business need) may necessitate using the model before validation is completed."" In such cases, sound practice involves greater attention to the model's limitations, informing relevant stakeholders of those limitations, and determining appropriate controls.",SR 26-2 Model Risk Management p.9; SR 26-2 Model Risk Management p.8; SR 26-2 Model Risk Management p.12; SR 26-2 Model Risk Management p.6; SR 26-2 Model Risk Management p.11
+What are the Federal Reserve's requirements for CCAR stress testing models?,False,True,,,,I couldn't find this in the documents.,SR 11-7 Model Risk Management (superseded) p.2; SR 11-7 Model Risk Management (superseded) p.1; SR 11-7 Model Risk Management (superseded) p.11; SR 26-2 Model Risk Management p.2; SR 11-7 Model Risk Management (superseded) p.11

@@ -1,0 +1,27 @@
+question,expected_doc,expected_page,answerable,key_facts
+What does SR 26-2 say about effective challenge?,SR 26-2,5,yes,expertise; independence|independent; standing|influence
+How does SR 26-2 address tailoring model risk management to a bank's size and complexity?,SR 26-2,,yes,30 billion; complex
+Which agencies issued SR 26-2?,SR 26-2,1,yes,Federal Reserve; FDIC|Federal Deposit Insurance; OCC|Comptroller
+How does SR 11-7 define a model?,SR 11-7,3,yes,quantitative method|quantitative approach; input; estimate
+What are the core elements of model validation in SR 11-7?,SR 11-7,,yes,conceptual soundness; ongoing monitoring; outcomes analysis
+What is outcomes analysis in model validation?,SR 11-7,,yes,actual outcomes; back-testing|backtesting|back testing
+What role does the board of directors play in model risk management under SR 11-7?,SR 11-7,,yes,senior management; policies
+What are the four core functions of the NIST AI Risk Management Framework?,NIST AI RMF,,yes,govern; map; measure; manage
+What characteristics of trustworthy AI does the NIST AI RMF describe?,NIST AI RMF,,yes,valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy enhanced|privacy-enhanced; fair
+What does the GOVERN function cover in the NIST AI RMF?,NIST AI RMF,,yes,polic; accountab; diversity; culture; engagement|stakeholder|AI actors; third party|third-party
+What does NIST mean by confabulation in generative AI?,NIST GenAI,,yes,erroneous|false; confident
+What risks unique to or worsened by generative AI does the NIST Generative AI Profile identify?,NIST GenAI,,yes,CBRN|chemical; confabulation; dangerous|violent|hateful; data privacy; environmental; harmful bias|homogenization; human AI configuration|human-AI; information integrity; information security; intellectual property; obscene|degrading|abusive; value chain
+What are the stages of the third-party relationship life cycle?,Third-Party,,yes,planning; due diligence; contract negotiation; ongoing monitoring; termination
+What should due diligence on a third party include?,Third-Party,,yes,perform the activity; comply|compliance; safe and sound|safely and soundly
+What should a bank consider when terminating a third-party relationship?,Third-Party,,yes,
+What changed between SR 11-7 and SR 26-2 on effective challenge?,SR 26-2,5,yes,incentives; competence; independence|independent; standing
+How does the NIST AI RMF approach to governance compare with SR 11-7's governance expectations?,SR 11-7,,yes,
+What is Beacon Bank's overdraft fee?,,,no,
+What are the capital requirements under Basel III?,,,no,
+What does the EU AI Act require for high-risk AI systems?,,,no,
+How should a bank validate a credit scoring model under the Equal Credit Opportunity Act?,,,no,
+Does SR 26-2 apply to generative AI and agentic AI?,SR 26-2,3,yes,not within the scope|outside the scope|out of scope|excluded|not in scope|does not apply
+Which banking organizations is SR 26-2 primarily aimed at?,SR 26-2,2,yes,30 billion
+How does SR 26-2 determine whether a model is material?,SR 26-2,4,yes,exposure; purpose
+Can a model be used before it is validated under SR 26-2?,SR 26-2,9,yes,urgent|certain circumstances; limitations; controls
+What are the Federal Reserve's requirements for CCAR stress testing models?,,,no,
