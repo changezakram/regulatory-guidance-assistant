@@ -70,23 +70,25 @@ EXAMPLES = [
 
 
 def use_example(text):
+    """Fill the question box only; the visitor clicks Submit to run it."""
     st.session_state.question = text
-    st.session_state.run_now = True  # examples run immediately
+    st.session_state.pop("result", None)  # don't leave an answer to a different question on screen
 
 
-st.caption("Try an example, or type your own question below.")
+st.caption("Pick an example to fill in the question, or type your own, then click Submit.")
 cols = st.columns(len(EXAMPLES))
 for col, (label, text) in zip(cols, EXAMPLES):
     col.button(label, help=text, on_click=use_example, args=(text,), width="stretch")
 
-# A form, so a question runs when the visitor clicks Ask (or presses Enter).
-with st.form("ask_form", border=False):
-    st.text_input("Ask a question about the documents", max_chars=MAX_CHARS, key="question")
+# A form, so nothing runs until the visitor clicks Submit (pressing Enter does not submit).
+with st.form("ask_form", border=False, enter_to_submit=False):
+    q_col, b_col = st.columns([5, 1], vertical_alignment="bottom")
+    q_col.text_input("Ask a question about the documents", max_chars=MAX_CHARS, key="question")
+    submitted = b_col.form_submit_button("Submit", type="primary", width="stretch")
     mode = st.radio("Retrieval", ["hybrid", "vector", "keyword"], horizontal=True, key="mode")
-    submitted = st.form_submit_button("Ask", type="primary")
 
 question = (st.session_state.get("question") or "").strip()
-if (submitted or st.session_state.pop("run_now", False)) and question:
+if submitted and question:
     # Count a question only when it's new, not when the same one is asked again.
     current = (question, mode)
     is_new = st.session_state.get("last_asked") != current
