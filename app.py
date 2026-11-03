@@ -59,11 +59,33 @@ def cached_answer(question, mode):
     return answer(question, mode=mode)
 
 
-question = st.text_input("Ask a question about the documents", max_chars=MAX_CHARS)
+# Example questions: each shows a different kind of question, including one the
+# documents can't answer, so visitors see the assistant decline as well as answer.
+EXAMPLES = [
+    ("Scope", "Does SR 26-2 apply to generative AI and agentic AI?"),
+    ("A list", "What are the stages of the third-party relationship life cycle?"),
+    ("A comparison", "What changed between SR 11-7 and SR 26-2 on effective challenge?"),
+    ("Out of scope", "What are the capital requirements under Basel III?"),
+]
+
+
+def use_example(text):
+    st.session_state.question = text
+
+
+st.caption("Try an example, or type your own question below.")
+cols = st.columns(len(EXAMPLES))
+for col, (label, text) in zip(cols, EXAMPLES):
+    col.button(label, help=text, on_click=use_example, args=(text,), width="stretch")
+
+question = st.text_input("Ask a question about the documents", max_chars=MAX_CHARS, key="question")
 mode = st.radio("Retrieval", ["hybrid", "vector", "keyword"], horizontal=True)
 
 if question:
-    if st.session_state.asked >= MAX_QUESTIONS:
+    # Count a question only when it's new, not every time the page refreshes.
+    current = (question.strip(), mode)
+    is_new = st.session_state.get("last_asked") != current
+    if is_new and st.session_state.asked >= MAX_QUESTIONS:
         st.warning(f"This demo allows {MAX_QUESTIONS} questions per visit. Thanks for trying it.")
         st.stop()
     with st.spinner("Searching and drafting an answer..."):
@@ -72,7 +94,9 @@ if question:
         except Exception:
             st.error("Something went wrong generating the answer. Please try again shortly.")
             st.stop()
-    st.session_state.asked += 1
+    if is_new:
+        st.session_state.asked += 1
+        st.session_state.last_asked = current
 
     st.markdown(result["answer"])
     if REFUSAL.lower().rstrip(".") in result["answer"].lower():
