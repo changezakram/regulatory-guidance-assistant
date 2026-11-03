@@ -71,6 +71,7 @@ EXAMPLES = [
 
 def use_example(text):
     st.session_state.question = text
+    st.session_state.run_now = True  # examples run immediately
 
 
 st.caption("Try an example, or type your own question below.")
@@ -78,19 +79,23 @@ cols = st.columns(len(EXAMPLES))
 for col, (label, text) in zip(cols, EXAMPLES):
     col.button(label, help=text, on_click=use_example, args=(text,), width="stretch")
 
-question = st.text_input("Ask a question about the documents", max_chars=MAX_CHARS, key="question")
-mode = st.radio("Retrieval", ["hybrid", "vector", "keyword"], horizontal=True)
+# A form, so a question runs when the visitor clicks Ask (or presses Enter).
+with st.form("ask_form", border=False):
+    st.text_input("Ask a question about the documents", max_chars=MAX_CHARS, key="question")
+    mode = st.radio("Retrieval", ["hybrid", "vector", "keyword"], horizontal=True, key="mode")
+    submitted = st.form_submit_button("Ask", type="primary")
 
-if question:
-    # Count a question only when it's new, not every time the page refreshes.
-    current = (question.strip(), mode)
+question = (st.session_state.get("question") or "").strip()
+if (submitted or st.session_state.pop("run_now", False)) and question:
+    # Count a question only when it's new, not when the same one is asked again.
+    current = (question, mode)
     is_new = st.session_state.get("last_asked") != current
     if is_new and st.session_state.asked >= MAX_QUESTIONS:
         st.warning(f"This demo allows {MAX_QUESTIONS} questions per visit. Thanks for trying it.")
         st.stop()
     with st.spinner("Searching and drafting an answer..."):
         try:
-            result = cached_answer(question.strip(), mode)
+            st.session_state.result = cached_answer(question, mode)
         except Exception:
             st.error("Something went wrong generating the answer. Please try again shortly.")
             st.stop()
@@ -98,6 +103,8 @@ if question:
         st.session_state.asked += 1
         st.session_state.last_asked = current
 
+result = st.session_state.get("result")
+if result:
     st.markdown(result["answer"])
     if REFUSAL.lower().rstrip(".") in result["answer"].lower():
         st.caption("No sources shown, because the documents don't answer this question.")
